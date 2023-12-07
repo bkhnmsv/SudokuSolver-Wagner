@@ -25,6 +25,19 @@ namespace SudokuSolver {
         }
       }
     }
+        public override string ToString()
+        {
+            StringBuilder sb = new();
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    sb.Append($"{board[i, j]} ");
+                }
+                sb.AppendLine();
+            }
+            return sb.ToString();
+        }
 
     public void SetNumber(int i, int j, int number, bool fixedNumber = false) {
       board[i, j] = number;
